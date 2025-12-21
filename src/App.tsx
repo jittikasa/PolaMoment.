@@ -112,10 +112,7 @@ const App: React.FC = () => {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#FAFAF5]/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className="w-10 h-10 bg-gradient-to-br from-pola-cream to-stone-200 rounded-2xl flex items-center justify-center relative shadow-md border-2 border-pola-gray/30">
-              <div className="w-6 h-6 bg-pola-black rounded-full border-2 border-pola-gray"></div>
-              <div className="w-2 h-2 bg-pola-red rounded-full absolute top-2 right-2 shadow-sm"></div>
-            </div>
+            <img src="/Icon-1024.png" alt="PolaMoment" className="w-10 h-10 rounded-2xl shadow-md" />
             <span className={`font-serif font-bold text-xl tracking-wide transition-opacity ${scrolled ? 'opacity-100' : 'opacity-0 md:opacity-100'}`}>
               PolaMoment<span className="text-pola-red">.</span>
             </span>
@@ -198,7 +195,7 @@ const App: React.FC = () => {
             <div className="bg-white p-4 shadow-2xl rounded-sm">
               <div className="aspect-square bg-gradient-to-br from-stone-100 to-stone-200 rounded-sm mb-4 flex items-center justify-center overflow-hidden relative">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,48,37,0.1)_0%,rgba(217,48,37,0.05)_50%,transparent_100%)]"></div>
-                <PolaroidCameraIcon />
+                <img src="/Icon-1024.png" alt="PolaMoment Camera" className="w-48 h-48 object-contain" />
               </div>
               <div className="h-16 flex items-center justify-center">
                 <p className="font-serif italic text-stone-500 text-sm">Instant nostalgia in every shot</p>
@@ -296,13 +293,7 @@ const App: React.FC = () => {
                   <div className="relative bg-white p-5 shadow-2xl rounded-sm transform hover:rotate-0 transition-transform duration-500">
                     <div className="aspect-square bg-gradient-to-br from-pola-cream via-stone-100 to-stone-200 rounded-sm mb-5 flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-pola-red/10 to-transparent"></div>
-                      <div className="text-center z-10">
-                        <div className="w-20 h-20 bg-pola-black rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-pola-gray relative">
-                          <div className="w-12 h-12 bg-stone-400 rounded-full"></div>
-                          <div className="w-3 h-3 bg-pola-red rounded-full absolute top-2 right-2"></div>
-                        </div>
-                        <p className="font-serif text-2xl text-stone-700 italic">Your Moments</p>
-                      </div>
+                      <img src="/Icon-1024.png" alt="PolaMoment" className="w-40 h-40 object-contain z-10" />
                     </div>
                     <div className="h-20 flex items-center justify-center">
                       <p className="font-serif italic text-stone-600">Timeless memories, one click away</p>
@@ -370,10 +361,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
             <div className="text-center md:text-left">
               <div className="flex items-center gap-3 justify-center md:justify-start mb-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-pola-cream to-stone-200 rounded-2xl flex items-center justify-center relative shadow-md border-2 border-pola-gray/30">
-                  <div className="w-6 h-6 bg-white rounded-full border-2 border-pola-gray"></div>
-                  <div className="w-2 h-2 bg-pola-red rounded-full absolute top-2 right-2 shadow-sm"></div>
-                </div>
+                <img src="/Icon-1024.png" alt="PolaMoment" className="w-10 h-10 rounded-2xl shadow-md" />
                 <div className="text-white font-serif font-bold text-2xl">PolaMoment<span className="text-pola-red">.</span></div>
               </div>
               <p className="text-sm">Vintage Polaroid camera for your iPhone</p>
