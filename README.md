@@ -1,57 +1,20 @@
-# PolaMoment Privacy Policy Website
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-This is a simple static website for PolaMoment's privacy policy, designed to be deployed on Netlify.
+# Run and deploy your AI Studio app
 
-## Deployment Instructions
+This contains everything you need to run your app locally.
 
-### Option 1: Deploy via Netlify Dashboard (Recommended)
+View your app in AI Studio: https://ai.studio/apps/bundled/research_visualization
 
-1. Go to [netlify.com](https://netlify.com) and sign in
-2. Click "Add new site" → "Deploy manually"
-3. Drag and drop this entire `web-privacy` folder
-4. Your site will be live at a random URL like `random-name-123.netlify.app`
-5. (Optional) Change the site name in Settings → Site details → Change site name
-6. Use this URL as your Privacy Policy URL in App Store Connect
+## Run Locally
 
-### Option 2: Deploy via GitHub
+**Prerequisites:**  Node.js
 
-1. Create a new GitHub repository
-2. Upload the contents of this `web-privacy` folder
-3. Go to Netlify → "Add new site" → "Import an existing project"
-4. Connect your GitHub account and select the repository
-5. Deploy!
 
-### Option 3: Netlify CLI
-
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Navigate to this folder
-cd web-privacy
-
-# Deploy
-netlify deploy --prod
-```
-
-## Custom Domain (Optional)
-
-If you have a custom domain:
-1. In Netlify, go to Site settings → Domain management
-2. Add your custom domain
-3. Follow DNS configuration instructions
-4. Your privacy policy will be at `yourdomain.com` or `privacy.yourdomain.com`
-
-## Files Included
-
-- `index.html` - Privacy policy webpage with PolaMoment branding
-- `netlify.toml` - Netlify configuration with redirects and security headers
-- `README.md` - This file
-
-## After Deployment
-
-Once deployed, copy your Netlify URL and use it in:
-1. App Store Connect → App Information → Privacy Policy URL
-2. TestFlight metadata
-
-Example URL format: `https://polamoment-privacy.netlify.app`
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
