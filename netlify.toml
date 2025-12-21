@@ -1,12 +1,8 @@
 # Netlify configuration for PolaMoment
 
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && npm run build && cp public/privacy.html dist/"
   publish = "dist"
-
-# Copy privacy.html to dist during build
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "/privacy"
