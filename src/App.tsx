@@ -1,5 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Menu, X, Camera, Heart, Download, Lock, Sparkles, Apple } from 'lucide-react';
+import { ArrowDown, Menu, X, Apple } from 'lucide-react';
+
+// Custom Polaroid Camera Icons
+const PolaroidCameraIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12">
+    <rect x="12" y="16" width="40" height="32" rx="2" fill="currentColor" opacity="0.2"/>
+    <rect x="12" y="16" width="40" height="24" rx="2" stroke="currentColor" strokeWidth="2"/>
+    <circle cx="32" cy="28" r="8" stroke="currentColor" strokeWidth="2"/>
+    <circle cx="32" cy="28" r="5" fill="currentColor" opacity="0.3"/>
+    <rect x="16" y="40" width="32" height="8" rx="1" fill="currentColor"/>
+    <circle cx="45" cy="21" r="2" fill="#D93025"/>
+  </svg>
+);
+
+const VintageFilterIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12">
+    <rect x="16" y="16" width="32" height="32" rx="2" stroke="currentColor" strokeWidth="2"/>
+    <path d="M24 24 L40 40 M40 24 L24 40" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.3"/>
+    <circle cx="32" cy="32" r="8" stroke="currentColor" strokeWidth="2"/>
+    <circle cx="32" cy="32" r="5" fill="currentColor" opacity="0.2"/>
+    <path d="M20 20 L20 16 L16 16 M44 16 L48 16 L48 20 M48 44 L48 48 L44 48 M16 48 L16 44" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+);
+
+const InstantPhotoIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12">
+    <rect x="14" y="12" width="36" height="40" rx="2" fill="currentColor" opacity="0.1"/>
+    <rect x="14" y="12" width="36" height="28" fill="currentColor" opacity="0.2"/>
+    <rect x="18" y="16" width="28" height="20" fill="white" stroke="currentColor" strokeWidth="2"/>
+    <path d="M23 26 L28 31 L32 27 L41 36" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="37" cy="21" r="2" fill="currentColor"/>
+    <rect x="14" y="40" width="36" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+  </svg>
+);
+
+const PrivacyLockIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12">
+    <rect x="20" y="30" width="24" height="20" rx="2" stroke="currentColor" strokeWidth="2"/>
+    <path d="M24 30 L24 22 C24 17.6 27.6 14 32 14 C36.4 14 40 17.6 40 22 L40 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="32" cy="40" r="3" fill="currentColor"/>
+    <path d="M32 43 L32 46" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+);
+
+const NoSubscriptionIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12">
+    <circle cx="32" cy="32" r="18" stroke="currentColor" strokeWidth="2"/>
+    <path d="M32 24 L32 32 L38 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M20 32 L16 32 M48 32 L44 32 M32 20 L32 16 M32 48 L32 44" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M50 14 L14 50" stroke="#D93025" strokeWidth="3" strokeLinecap="round"/>
+  </svg>
+);
+
+const iOSAppIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12">
+    <rect x="12" y="12" width="40" height="40" rx="8" stroke="currentColor" strokeWidth="2"/>
+    <rect x="16" y="16" width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+    <path d="M28 24 L32 20 L36 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M32 20 L32 36" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M24 32 L40 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="28" cy="42" r="2" fill="currentColor"/>
+    <circle cx="36" cy="42" r="2" fill="currentColor"/>
+  </svg>
+);
 
 const FeatureCard = ({ icon: Icon, title, description, delay }: { icon: any, title: string, description: string, delay: string }) => {
   return (
@@ -7,8 +70,8 @@ const FeatureCard = ({ icon: Icon, title, description, delay }: { icon: any, tit
       className="flex flex-col group animate-fade-in-up items-center p-8 bg-white rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 w-full hover:border-pola-red/30"
       style={{ animationDelay: delay }}
     >
-      <div className="w-16 h-16 bg-pola-red rounded-full flex items-center justify-center text-white mb-6 shadow-md group-hover:scale-110 transition-transform">
-        <Icon size={32} />
+      <div className="w-20 h-20 flex items-center justify-center text-pola-black mb-6 group-hover:scale-110 transition-transform group-hover:text-pola-red">
+        <Icon />
       </div>
       <h3 className="font-serif text-2xl text-stone-900 text-center mb-3">{title}</h3>
       <p className="text-stone-600 text-center leading-relaxed">{description}</p>
@@ -54,7 +117,7 @@ const App: React.FC = () => {
               <div className="w-2 h-2 bg-pola-red rounded-full absolute top-2 right-2 shadow-sm"></div>
             </div>
             <span className={`font-serif font-bold text-xl tracking-wide transition-opacity ${scrolled ? 'opacity-100' : 'opacity-0 md:opacity-100'}`}>
-              PolaMoment
+              PolaMoment<span className="text-pola-red">.</span>
             </span>
           </div>
 
@@ -121,7 +184,7 @@ const App: React.FC = () => {
             iOS • Camera App
           </div>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-medium leading-tight md:leading-[0.9] mb-8 text-stone-900">
-            PolaMoment
+            PolaMoment<span className="text-pola-red text-6xl md:text-8xl lg:text-[8rem]">.</span>
           </h1>
           <p className="font-serif italic text-2xl md:text-4xl text-stone-600 mb-6">
             Capture the Magic
@@ -135,7 +198,7 @@ const App: React.FC = () => {
             <div className="bg-white p-4 shadow-2xl rounded-sm">
               <div className="aspect-square bg-gradient-to-br from-stone-100 to-stone-200 rounded-sm mb-4 flex items-center justify-center overflow-hidden relative">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,48,37,0.1)_0%,rgba(217,48,37,0.05)_50%,transparent_100%)]"></div>
-                <Camera size={80} className="text-stone-400" />
+                <PolaroidCameraIcon />
               </div>
               <div className="h-16 flex items-center justify-center">
                 <p className="font-serif italic text-stone-500 text-sm">Instant nostalgia in every shot</p>
@@ -166,37 +229,37 @@ const App: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard
-                icon={Camera}
+                icon={PolaroidCameraIcon}
                 title="Vintage Camera"
                 description="Transform your iPhone into a classic Polaroid camera with authentic vintage filters and effects"
                 delay="0s"
               />
               <FeatureCard
-                icon={Sparkles}
+                icon={VintageFilterIcon}
                 title="Instant Effects"
                 description="Apply beautiful retro filters in real-time. See your Polaroid develop right before your eyes"
                 delay="0.1s"
               />
               <FeatureCard
-                icon={Download}
+                icon={InstantPhotoIcon}
                 title="Save & Share"
                 description="Save your Polaroid-style photos to your library and share memories with friends and family"
                 delay="0.2s"
               />
               <FeatureCard
-                icon={Lock}
+                icon={PrivacyLockIcon}
                 title="Privacy First"
                 description="All photos stay on your device. No cloud storage, no tracking, no data collection"
                 delay="0.3s"
               />
               <FeatureCard
-                icon={Heart}
+                icon={NoSubscriptionIcon}
                 title="No Subscriptions"
                 description="Pay once, use forever. No hidden fees, no monthly charges, no in-app purchases"
                 delay="0.4s"
               />
               <FeatureCard
-                icon={Apple}
+                icon={iOSAppIcon}
                 title="iOS Native"
                 description="Built specifically for iOS with a beautiful, intuitive interface that feels right at home"
                 delay="0.5s"
@@ -218,10 +281,10 @@ const App: React.FC = () => {
                     <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-pola-red">R</span>emember the excitement of shaking a fresh Polaroid and watching your memory slowly appear? That magic feeling of instant photography is now at your fingertips.
                   </p>
                   <p>
-                    PolaMoment brings back the charm of vintage Polaroid cameras to your iPhone. Create authentic-looking instant photos with that distinctive white border, warm tones, and slightly faded aesthetic that made Polaroids so iconic.
+                    PolaMoment<span className="text-pola-red font-bold">.</span> brings back the charm of vintage Polaroid cameras to your iPhone. Create authentic-looking instant photos with that distinctive white border, warm tones, and slightly faded aesthetic that made Polaroids so iconic.
                   </p>
                   <p>
-                    Whether you're capturing moments with friends, documenting your travels, or just expressing your creativity, PolaMoment makes every photo feel special.
+                    Whether you're capturing moments with friends, documenting your travels, or just expressing your creativity, PolaMoment<span className="text-pola-red font-bold">.</span> makes every photo feel special.
                   </p>
                 </div>
               </div>
@@ -234,8 +297,9 @@ const App: React.FC = () => {
                     <div className="aspect-square bg-gradient-to-br from-pola-cream via-stone-100 to-stone-200 rounded-sm mb-5 flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-pola-red/10 to-transparent"></div>
                       <div className="text-center z-10">
-                        <div className="w-20 h-20 bg-pola-black rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-pola-gray">
-                          <Camera size={40} className="text-white" />
+                        <div className="w-20 h-20 bg-pola-black rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-pola-gray relative">
+                          <div className="w-12 h-12 bg-stone-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-pola-red rounded-full absolute top-2 right-2"></div>
                         </div>
                         <p className="font-serif text-2xl text-stone-700 italic">Your Moments</p>
                       </div>
@@ -253,7 +317,11 @@ const App: React.FC = () => {
         {/* Privacy Highlight */}
         <section className="py-24 bg-stone-900 text-white">
           <div className="container mx-auto px-6 text-center">
-            <Lock className="w-16 h-16 mx-auto mb-6 text-pola-red" />
+            <div className="w-16 h-16 mx-auto mb-6">
+              <div className="text-pola-red">
+                <PrivacyLockIcon />
+              </div>
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">Your Privacy Matters</h2>
             <p className="max-w-3xl mx-auto text-xl text-stone-300 leading-relaxed mb-8">
               We don't collect, store, or share any of your data. All photos stay on your device. No cloud storage, no analytics, no tracking. Just you and your memories.
@@ -275,7 +343,7 @@ const App: React.FC = () => {
             </div>
             <h2 className="font-serif text-4xl md:text-6xl mb-6 text-stone-900">Start Creating Today</h2>
             <p className="max-w-2xl mx-auto text-xl text-stone-600 mb-12 leading-relaxed">
-              Download PolaMoment and start capturing vintage-style Polaroid photos on your iPhone right away.
+              Download PolaMoment<span className="text-pola-red font-bold">.</span> and start capturing vintage-style Polaroid photos on your iPhone right away.
             </p>
 
             <a
@@ -306,7 +374,7 @@ const App: React.FC = () => {
                   <div className="w-6 h-6 bg-white rounded-full border-2 border-pola-gray"></div>
                   <div className="w-2 h-2 bg-pola-red rounded-full absolute top-2 right-2 shadow-sm"></div>
                 </div>
-                <div className="text-white font-serif font-bold text-2xl">PolaMoment</div>
+                <div className="text-white font-serif font-bold text-2xl">PolaMoment<span className="text-pola-red">.</span></div>
               </div>
               <p className="text-sm">Vintage Polaroid camera for your iPhone</p>
             </div>
@@ -316,7 +384,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="text-center pt-8 border-t border-stone-800 text-xs text-stone-600">
-            <p>© 2024 PolaMoment. All rights reserved.</p>
+            <p>© 2024 PolaMoment<span className="text-pola-red">.</span> All rights reserved.</p>
             <p className="mt-2 italic opacity-70">Making memories instant again, one photo at a time.</p>
           </div>
         </div>
