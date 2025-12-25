@@ -194,15 +194,12 @@ const App: React.FC = () => {
 
             {/* Animated Polaroids */}
             <div className="absolute top-[6%] left-1/2 -translate-x-1/2 w-[42%] pointer-events-none">
-              {/* Polaroid 1 - Pink/Purple */}
+              {/* Polaroid 1 - Christmas Gifts */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '2s' }}>
                 <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
                   {/* Photo area */}
-                  <div className="aspect-square bg-gradient-to-br from-pink-400 via-purple-300 to-blue-400 mb-3 relative overflow-hidden border border-gray-100">
-                    <div className="absolute inset-0 bg-gradient-to-br from-pink-500/40 via-transparent to-blue-500/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <img src="/Icon-1024.png" alt="" className="w-16 h-16 object-contain opacity-50 drop-shadow-lg" />
-                    </div>
+                  <div className="aspect-square mb-3 relative overflow-hidden border border-gray-100">
+                    <img src="/Image-1.jpeg" alt="" className="w-full h-full object-cover" />
                     {/* Vintage overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
                   </div>
@@ -211,15 +208,12 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Polaroid 2 - Orange/Yellow */}
+              {/* Polaroid 2 - Food Platter */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '3.5s' }}>
                 <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
                   {/* Photo area */}
-                  <div className="aspect-square bg-gradient-to-br from-orange-400 via-yellow-300 to-pink-400 mb-3 relative overflow-hidden border border-gray-100">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-transparent to-pink-500/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <img src="/Icon-1024.png" alt="" className="w-16 h-16 object-contain opacity-50 drop-shadow-lg" />
-                    </div>
+                  <div className="aspect-square mb-3 relative overflow-hidden border border-gray-100">
+                    <img src="/Image-2.jpeg" alt="" className="w-full h-full object-cover" />
                     {/* Vintage overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
                   </div>
@@ -228,15 +222,12 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Polaroid 3 - Green/Teal */}
+              {/* Polaroid 3 - Black Cat */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '5s' }}>
                 <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
                   {/* Photo area */}
-                  <div className="aspect-square bg-gradient-to-br from-emerald-400 via-teal-300 to-cyan-400 mb-3 relative overflow-hidden border border-gray-100">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/40 via-transparent to-cyan-500/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <img src="/Icon-1024.png" alt="" className="w-16 h-16 object-contain opacity-50 drop-shadow-lg" />
-                    </div>
+                  <div className="aspect-square mb-3 relative overflow-hidden border border-gray-100">
+                    <img src="/Image-3.jpeg" alt="" className="w-full h-full object-cover" />
                     {/* Vintage overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
                   </div>
