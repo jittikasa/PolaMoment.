@@ -193,7 +193,7 @@ const App: React.FC = () => {
             <img src="/Cam.svg" alt="PolaMoment Camera" className="w-full h-auto relative z-0" />
 
             {/* Animated Polaroids */}
-            <div className="absolute top-[15%] left-1/2 -translate-x-[45%] w-[42%] pointer-events-none z-50">
+            <div className="absolute top-[45%] left-1/2 -translate-x-[45%] w-[42%] pointer-events-none z-50">
               {/* Polaroid 1 - Christmas Gifts */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '2s' }}>
                 <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
@@ -236,15 +236,6 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="flex justify-center">
-            <a href="#story" onClick={scrollToSection('story')} className="group flex flex-col items-center gap-2 text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors cursor-pointer">
-              <span className="tracking-wider">EXPLORE</span>
-              <span className="p-2 border border-stone-300 rounded-full group-hover:border-stone-900 group-hover:bg-white transition-all bg-white/50">
-                <ArrowDown size={16} />
-              </span>
-            </a>
           </div>
         </div>
       </header>
