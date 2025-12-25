@@ -196,24 +196,33 @@ const App: React.FC = () => {
             <div className="absolute top-[21%] left-1/2 -translate-x-1/2 w-[40%] pointer-events-none">
               {/* Polaroid 1 */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '1.5s' }}>
-                <div className="bg-white p-2 shadow-xl rounded-sm">
-                  <div className="aspect-square bg-gradient-to-br from-pink-100 via-purple-50 to-blue-50 rounded-sm mb-2"></div>
+                <div className="bg-white p-2 shadow-2xl rounded-sm">
+                  <div className="aspect-square bg-gradient-to-br from-pink-300 via-purple-200 to-blue-300 rounded-sm mb-2 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-pink-400/30 to-transparent"></div>
+                    <img src="/Icon-1024.png" alt="" className="w-20 h-20 object-contain opacity-40" />
+                  </div>
                   <div className="h-8"></div>
                 </div>
               </div>
 
               {/* Polaroid 2 */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '3s' }}>
-                <div className="bg-white p-2 shadow-xl rounded-sm">
-                  <div className="aspect-square bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-50 rounded-sm mb-2"></div>
+                <div className="bg-white p-2 shadow-2xl rounded-sm">
+                  <div className="aspect-square bg-gradient-to-br from-orange-300 via-yellow-200 to-pink-300 rounded-sm mb-2 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-transparent"></div>
+                    <img src="/Icon-1024.png" alt="" className="w-20 h-20 object-contain opacity-40" />
+                  </div>
                   <div className="h-8"></div>
                 </div>
               </div>
 
               {/* Polaroid 3 */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '4.5s' }}>
-                <div className="bg-white p-2 shadow-xl rounded-sm">
-                  <div className="aspect-square bg-gradient-to-br from-green-100 via-teal-50 to-blue-50 rounded-sm mb-2"></div>
+                <div className="bg-white p-2 shadow-2xl rounded-sm">
+                  <div className="aspect-square bg-gradient-to-br from-green-300 via-teal-200 to-blue-300 rounded-sm mb-2 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-transparent"></div>
+                    <img src="/Icon-1024.png" alt="" className="w-20 h-20 object-contain opacity-40" />
+                  </div>
                   <div className="h-8"></div>
                 </div>
               </div>
