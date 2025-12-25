@@ -188,9 +188,36 @@ const App: React.FC = () => {
             Transform your iPhone into a vintage Polaroid camera. Create instant memories with that iconic retro aesthetic we all love.
           </p>
 
-          {/* Camera Visual */}
-          <div className="max-w-md mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <img src="/Cam.svg" alt="PolaMoment Camera" className="w-full h-auto" />
+          {/* Camera Visual with Polaroid Animation */}
+          <div className="max-w-md mx-auto mb-12 relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <img src="/Cam.svg" alt="PolaMoment Camera" className="w-full h-auto relative z-10" />
+
+            {/* Animated Polaroids */}
+            <div className="absolute top-[21%] left-1/2 -translate-x-1/2 w-[40%] pointer-events-none">
+              {/* Polaroid 1 */}
+              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '1.5s' }}>
+                <div className="bg-white p-2 shadow-xl rounded-sm">
+                  <div className="aspect-square bg-gradient-to-br from-pink-100 via-purple-50 to-blue-50 rounded-sm mb-2"></div>
+                  <div className="h-8"></div>
+                </div>
+              </div>
+
+              {/* Polaroid 2 */}
+              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '3s' }}>
+                <div className="bg-white p-2 shadow-xl rounded-sm">
+                  <div className="aspect-square bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-50 rounded-sm mb-2"></div>
+                  <div className="h-8"></div>
+                </div>
+              </div>
+
+              {/* Polaroid 3 */}
+              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '4.5s' }}>
+                <div className="bg-white p-2 shadow-xl rounded-sm">
+                  <div className="aspect-square bg-gradient-to-br from-green-100 via-teal-50 to-blue-50 rounded-sm mb-2"></div>
+                  <div className="h-8"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="flex justify-center">
@@ -209,36 +236,36 @@ const App: React.FC = () => {
         <section id="story" className="py-24 bg-pola-cream border-t border-stone-200">
           <div className="container mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div>
+              <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">The Story</div>
                 <h2 className="font-serif text-4xl md:text-5xl mb-6 text-stone-900">Nostalgia Meets Technology</h2>
-                <div className="w-16 h-1 bg-pola-red mb-6"></div>
+                <div className="w-16 h-1 bg-pola-red mb-6 animate-slide-in" style={{ animationDelay: '0.3s' }}></div>
                 <div className="text-lg text-stone-600 leading-relaxed space-y-4">
-                  <p>
+                  <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                     <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-pola-red">R</span>emember the excitement of shaking a fresh Polaroid and watching your memory slowly appear? That magic feeling of instant photography is now at your fingertips.
                   </p>
-                  <p>
+                  <p className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
                     PolaMoment<span className="text-pola-red font-bold">.</span> brings back the charm of vintage Polaroid cameras to your iPhone. Create authentic-looking instant photos with that distinctive white border, warm tones, and slightly faded aesthetic that made Polaroids so iconic.
                   </p>
-                  <p>
+                  <p className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                     Whether you're capturing moments with friends, documenting your travels, or just expressing your creativity, PolaMoment<span className="text-pola-red font-bold">.</span> makes every photo feel special.
                   </p>
                 </div>
 
                 {/* Features Highlights */}
                 <div className="mt-8 space-y-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-pola-red"></div>
+                  <div className="flex items-start gap-3 animate-fade-in-up hover:translate-x-1 transition-transform duration-300" style={{ animationDelay: '0.7s' }}>
+                    <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform">
+                      <div className="w-2 h-2 rounded-full bg-pola-red animate-pulse"></div>
                     </div>
                     <div>
                       <h4 className="font-semibold text-stone-900 mb-1">Vintage Filters</h4>
                       <p className="text-sm text-stone-600">Authentic retro effects that transform your photos instantly</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3 animate-fade-in-up hover:translate-x-1 transition-transform duration-300" style={{ animationDelay: '0.8s' }}>
                     <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-pola-red"></div>
+                      <div className="w-2 h-2 rounded-full bg-pola-red animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                     </div>
                     <div>
                       <h4 className="font-semibold text-stone-900 mb-1">No Subscriptions</h4>
@@ -247,15 +274,15 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 {/* Multiple Polaroid Stack Effect */}
                 <div className="relative">
-                  <div className="absolute top-0 left-4 w-full h-full bg-white shadow-xl rounded-sm transform rotate-3 opacity-50"></div>
-                  <div className="absolute top-2 left-2 w-full h-full bg-white shadow-xl rounded-sm transform -rotate-2 opacity-70"></div>
-                  <div className="relative bg-white p-5 shadow-2xl rounded-sm transform hover:rotate-0 transition-transform duration-500">
+                  <div className="absolute top-0 left-4 w-full h-full bg-white shadow-xl rounded-sm transform rotate-3 opacity-50 transition-all duration-500 hover:rotate-6"></div>
+                  <div className="absolute top-2 left-2 w-full h-full bg-white shadow-xl rounded-sm transform -rotate-2 opacity-70 transition-all duration-500 hover:-rotate-4"></div>
+                  <div className="relative bg-white p-5 shadow-2xl rounded-sm transform hover:rotate-0 hover:scale-105 transition-all duration-500 cursor-pointer">
                     <div className="aspect-square bg-gradient-to-br from-pola-cream via-stone-100 to-stone-200 rounded-sm mb-5 flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-pola-red/10 to-transparent"></div>
-                      <img src="/Icon-1024.png" alt="PolaMoment" className="w-40 h-40 object-contain z-10" />
+                      <img src="/Icon-1024.png" alt="PolaMoment" className="w-40 h-40 object-contain z-10 transition-transform duration-500 hover:scale-110" />
                     </div>
                     <div className="h-20 flex items-center justify-center">
                       <p className="font-serif italic text-stone-600">Timeless memories, one click away</p>
@@ -270,18 +297,19 @@ const App: React.FC = () => {
         {/* Privacy Highlight */}
         <section className="py-24 bg-stone-900 text-white">
           <div className="container mx-auto px-6 text-center">
-            <div className="w-16 h-16 mx-auto mb-6">
-              <div className="text-pola-red">
+            <div className="w-16 h-16 mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="text-pola-red transform hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <PrivacyLockIcon />
               </div>
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">Your Privacy Matters</h2>
-            <p className="max-w-3xl mx-auto text-xl text-stone-300 leading-relaxed mb-8">
+            <h2 className="font-serif text-4xl md:text-5xl mb-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>Your Privacy Matters</h2>
+            <p className="max-w-3xl mx-auto text-xl text-stone-300 leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               We don't collect, store, or share any of your data. All photos stay on your device. No cloud storage, no analytics, no tracking. Just you and your memories.
             </p>
             <a
               href="/privacy.html"
-              className="inline-block px-8 py-3 bg-white text-stone-900 rounded-full hover:bg-pola-red hover:text-white transition-colors font-medium"
+              className="inline-block px-8 py-3 bg-white text-stone-900 rounded-full hover:bg-pola-red hover:text-white transition-all duration-300 font-medium hover:scale-105 transform animate-fade-in-up shadow-lg hover:shadow-xl"
+              style={{ animationDelay: '0.5s' }}
             >
               Read Privacy Policy
             </a>
@@ -291,26 +319,27 @@ const App: React.FC = () => {
         {/* Download Section */}
         <section id="download" className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <div className="inline-block mb-6 px-4 py-2 border border-pola-red text-pola-red text-xs tracking-[0.25em] uppercase font-bold rounded-full bg-pola-red/5">
+            <div className="inline-block mb-6 px-4 py-2 border border-pola-red text-pola-red text-xs tracking-[0.25em] uppercase font-bold rounded-full bg-pola-red/5 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Available on iOS
             </div>
-            <h2 className="font-serif text-4xl md:text-6xl mb-6 text-stone-900">Start Creating Today</h2>
-            <p className="max-w-2xl mx-auto text-xl text-stone-600 mb-12 leading-relaxed">
+            <h2 className="font-serif text-4xl md:text-6xl mb-6 text-stone-900 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>Start Creating Today</h2>
+            <p className="max-w-2xl mx-auto text-xl text-stone-600 mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               Download PolaMoment<span className="text-pola-red font-bold">.</span> and start capturing vintage-style Polaroid photos on your iPhone right away.
             </p>
 
             <a
               href="#"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-pola-black text-white rounded-full hover:bg-pola-red transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg font-medium"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-pola-black text-white rounded-full hover:bg-pola-red transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-110 text-lg font-medium animate-fade-in-up"
+              style={{ animationDelay: '0.5s' }}
             >
-              <Apple size={28} />
+              <Apple size={28} className="animate-pulse" />
               <div className="text-left">
                 <div className="text-xs opacity-80">Download on the</div>
                 <div className="font-bold">App Store</div>
               </div>
             </a>
 
-            <p className="mt-8 text-sm text-stone-500">
+            <p className="mt-8 text-sm text-stone-500 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               Requires iOS 14.0 or later • Compatible with iPhone
             </p>
           </div>
