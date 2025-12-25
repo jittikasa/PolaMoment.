@@ -188,17 +188,9 @@ const App: React.FC = () => {
             Transform your iPhone into a vintage Polaroid camera. Create instant memories with that iconic retro aesthetic we all love.
           </p>
 
-          {/* Polaroid Frame Visual */}
+          {/* Camera Visual */}
           <div className="max-w-md mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="bg-white p-4 shadow-2xl rounded-sm">
-              <div className="aspect-square bg-gradient-to-br from-stone-100 to-stone-200 rounded-sm mb-4 flex items-center justify-center overflow-hidden relative">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,48,37,0.1)_0%,rgba(217,48,37,0.05)_50%,transparent_100%)]"></div>
-                <img src="/Icon-1024.png" alt="PolaMoment Camera" className="w-48 h-48 object-contain" />
-              </div>
-              <div className="h-16 flex items-center justify-center">
-                <p className="font-serif italic text-stone-500 text-sm">Instant nostalgia in every shot</p>
-              </div>
-            </div>
+            <img src="/Cam.svg" alt="PolaMoment Camera" className="w-full h-auto" />
           </div>
 
           <div className="flex justify-center">
@@ -231,6 +223,37 @@ const App: React.FC = () => {
                   <p>
                     Whether you're capturing moments with friends, documenting your travels, or just expressing your creativity, PolaMoment<span className="text-pola-red font-bold">.</span> makes every photo feel special.
                   </p>
+                </div>
+
+                {/* Features Highlights */}
+                <div className="mt-8 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 rounded-full bg-pola-red"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-stone-900 mb-1">Vintage Filters</h4>
+                      <p className="text-sm text-stone-600">Authentic retro effects that transform your photos instantly</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 rounded-full bg-pola-red"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-stone-900 mb-1">Privacy First</h4>
+                      <p className="text-sm text-stone-600">All photos stay on your device, no cloud storage required</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 rounded-full bg-pola-red"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-stone-900 mb-1">No Subscriptions</h4>
+                      <p className="text-sm text-stone-600">One-time purchase, unlimited memories forever</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="relative">
