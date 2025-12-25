@@ -193,7 +193,7 @@ const App: React.FC = () => {
             <img src="/Cam.svg" alt="PolaMoment Camera" className="w-full h-auto relative z-0" />
 
             {/* Animated Polaroids */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[42%] pointer-events-none z-50">
+            <div className="absolute top-[15%] left-1/2 -translate-x-[45%] w-[42%] pointer-events-none z-50">
               {/* Polaroid 1 - Christmas Gifts */}
               <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '2s' }}>
                 <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
