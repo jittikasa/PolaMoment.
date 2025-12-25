@@ -241,15 +241,6 @@ const App: React.FC = () => {
                       <div className="w-2 h-2 rounded-full bg-pola-red"></div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-stone-900 mb-1">Privacy First</h4>
-                      <p className="text-sm text-stone-600">All photos stay on your device, no cloud storage required</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-pola-red/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-pola-red"></div>
-                    </div>
-                    <div>
                       <h4 className="font-semibold text-stone-900 mb-1">No Subscriptions</h4>
                       <p className="text-sm text-stone-600">One-time purchase, unlimited memories forever</p>
                     </div>
