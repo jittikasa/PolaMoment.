@@ -193,37 +193,55 @@ const App: React.FC = () => {
             <img src="/Cam.svg" alt="PolaMoment Camera" className="w-full h-auto relative z-10" />
 
             {/* Animated Polaroids */}
-            <div className="absolute top-[21%] left-1/2 -translate-x-1/2 w-[40%] pointer-events-none">
-              {/* Polaroid 1 */}
-              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '1.5s' }}>
-                <div className="bg-white p-2 shadow-2xl rounded-sm">
-                  <div className="aspect-square bg-gradient-to-br from-pink-300 via-purple-200 to-blue-300 rounded-sm mb-2 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-pink-400/30 to-transparent"></div>
-                    <img src="/Icon-1024.png" alt="" className="w-20 h-20 object-contain opacity-40" />
+            <div className="absolute top-[21%] left-1/2 -translate-x-1/2 w-[42%] pointer-events-none">
+              {/* Polaroid 1 - Pink/Purple */}
+              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '2s' }}>
+                <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
+                  {/* Photo area */}
+                  <div className="aspect-square bg-gradient-to-br from-pink-400 via-purple-300 to-blue-400 mb-3 relative overflow-hidden border border-gray-100">
+                    <div className="absolute inset-0 bg-gradient-to-br from-pink-500/40 via-transparent to-blue-500/20"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img src="/Icon-1024.png" alt="" className="w-16 h-16 object-contain opacity-50 drop-shadow-lg" />
+                    </div>
+                    {/* Vintage overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
                   </div>
-                  <div className="h-8"></div>
+                  {/* Bottom white space (characteristic of Polaroids) */}
+                  <div className="h-10"></div>
                 </div>
               </div>
 
-              {/* Polaroid 2 */}
-              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '3s' }}>
-                <div className="bg-white p-2 shadow-2xl rounded-sm">
-                  <div className="aspect-square bg-gradient-to-br from-orange-300 via-yellow-200 to-pink-300 rounded-sm mb-2 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-transparent"></div>
-                    <img src="/Icon-1024.png" alt="" className="w-20 h-20 object-contain opacity-40" />
+              {/* Polaroid 2 - Orange/Yellow */}
+              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '3.5s' }}>
+                <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
+                  {/* Photo area */}
+                  <div className="aspect-square bg-gradient-to-br from-orange-400 via-yellow-300 to-pink-400 mb-3 relative overflow-hidden border border-gray-100">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-transparent to-pink-500/20"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img src="/Icon-1024.png" alt="" className="w-16 h-16 object-contain opacity-50 drop-shadow-lg" />
+                    </div>
+                    {/* Vintage overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
                   </div>
-                  <div className="h-8"></div>
+                  {/* Bottom white space */}
+                  <div className="h-10"></div>
                 </div>
               </div>
 
-              {/* Polaroid 3 */}
-              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '4.5s' }}>
-                <div className="bg-white p-2 shadow-2xl rounded-sm">
-                  <div className="aspect-square bg-gradient-to-br from-green-300 via-teal-200 to-blue-300 rounded-sm mb-2 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-transparent"></div>
-                    <img src="/Icon-1024.png" alt="" className="w-20 h-20 object-contain opacity-40" />
+              {/* Polaroid 3 - Green/Teal */}
+              <div className="absolute w-full animate-polaroid-eject" style={{ animationDelay: '5s' }}>
+                <div className="bg-white p-3 shadow-2xl" style={{ borderRadius: '2px' }}>
+                  {/* Photo area */}
+                  <div className="aspect-square bg-gradient-to-br from-emerald-400 via-teal-300 to-cyan-400 mb-3 relative overflow-hidden border border-gray-100">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/40 via-transparent to-cyan-500/20"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img src="/Icon-1024.png" alt="" className="w-16 h-16 object-contain opacity-50 drop-shadow-lg" />
+                    </div>
+                    {/* Vintage overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
                   </div>
-                  <div className="h-8"></div>
+                  {/* Bottom white space */}
+                  <div className="h-10"></div>
                 </div>
               </div>
             </div>
