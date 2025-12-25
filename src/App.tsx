@@ -112,15 +112,14 @@ const App: React.FC = () => {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#FAFAF5]/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src="/Icon-1024.png" alt="PolaMoment" className="w-10 h-10 rounded-2xl shadow-md" />
+            <img src="/Icon-1024.png" alt="PolaMoment" className="w-10 h-10 rounded-2xl" />
             <span className={`font-serif font-bold text-xl tracking-wide transition-opacity ${scrolled ? 'opacity-100' : 'opacity-0 md:opacity-100'}`}>
               PolaMoment<span className="text-pola-red">.</span>
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-stone-600">
-            <a href="#features" onClick={scrollToSection('features')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">Features</a>
-            <a href="#about" onClick={scrollToSection('about')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">About</a>
+            <a href="#story" onClick={scrollToSection('story')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">Story</a>
             <a href="#download" onClick={scrollToSection('download')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">Download</a>
             <a
               href="/privacy.html"
@@ -147,8 +146,7 @@ const App: React.FC = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-[#FAFAF5] flex flex-col items-center justify-center gap-8 text-xl font-serif animate-fade-in">
-          <a href="#features" onClick={scrollToSection('features')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">Features</a>
-          <a href="#about" onClick={scrollToSection('about')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">About</a>
+          <a href="#story" onClick={scrollToSection('story')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">Story</a>
           <a href="#download" onClick={scrollToSection('download')} className="hover:text-pola-red transition-colors cursor-pointer uppercase">Download</a>
           <a
             href="/privacy.html"
@@ -204,7 +202,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="flex justify-center">
-            <a href="#features" onClick={scrollToSection('features')} className="group flex flex-col items-center gap-2 text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors cursor-pointer">
+            <a href="#story" onClick={scrollToSection('story')} className="group flex flex-col items-center gap-2 text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors cursor-pointer">
               <span className="tracking-wider">EXPLORE</span>
               <span className="p-2 border border-stone-300 rounded-full group-hover:border-stone-900 group-hover:bg-white transition-all bg-white/50">
                 <ArrowDown size={16} />
@@ -215,58 +213,8 @@ const App: React.FC = () => {
       </header>
 
       <main>
-        {/* Features Section */}
-        <section id="features" className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">Features</div>
-              <h2 className="font-serif text-4xl md:text-5xl mb-4 text-stone-900">Simple. Authentic. Beautiful.</h2>
-              <p className="text-stone-600 max-w-2xl mx-auto">Everything you need to capture and share vintage-style Polaroid photos</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <FeatureCard
-                icon={PolaroidCameraIcon}
-                title="Vintage Camera"
-                description="Transform your iPhone into a classic Polaroid camera with authentic vintage filters and effects"
-                delay="0s"
-              />
-              <FeatureCard
-                icon={VintageFilterIcon}
-                title="Instant Effects"
-                description="Apply beautiful retro filters in real-time. See your Polaroid develop right before your eyes"
-                delay="0.1s"
-              />
-              <FeatureCard
-                icon={InstantPhotoIcon}
-                title="Save & Share"
-                description="Save your Polaroid-style photos to your library and share memories with friends and family"
-                delay="0.2s"
-              />
-              <FeatureCard
-                icon={PrivacyLockIcon}
-                title="Privacy First"
-                description="All photos stay on your device. No cloud storage, no tracking, no data collection"
-                delay="0.3s"
-              />
-              <FeatureCard
-                icon={NoSubscriptionIcon}
-                title="No Subscriptions"
-                description="Pay once, use forever. No hidden fees, no monthly charges, no in-app purchases"
-                delay="0.4s"
-              />
-              <FeatureCard
-                icon={iOSAppIcon}
-                title="iOS Native"
-                description="Built specifically for iOS with a beautiful, intuitive interface that feels right at home"
-                delay="0.5s"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="py-24 bg-pola-cream border-t border-stone-200">
+        {/* The Story Section */}
+        <section id="story" className="py-24 bg-pola-cream border-t border-stone-200">
           <div className="container mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div>
@@ -360,8 +308,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
             <div className="text-center md:text-left">
-              <div className="flex items-center gap-3 justify-center md:justify-start mb-3">
-                <img src="/Icon-1024.png" alt="PolaMoment" className="w-10 h-10 rounded-2xl shadow-md" />
+              <div className="flex items-center justify-center md:justify-start mb-3">
                 <div className="text-white font-serif font-bold text-2xl">PolaMoment<span className="text-pola-red">.</span></div>
               </div>
               <p className="text-sm">Vintage Polaroid camera for your iPhone</p>
